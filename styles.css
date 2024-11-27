@@ -1,0 +1,177 @@
+/* Reset Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Garante que a altura da página seja 100% */
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Layout Geral */
+.wrapper {
+  display: flex;
+  flex-direction: column; /* Organiza elementos verticalmente */
+  min-height: 100vh; /* Faz o container ocupar toda a altura da janela */
+}
+
+main {
+  flex: 1; /* Faz o conteúdo ocupar o espaço disponível */
+  padding: 1rem; /* Adiciona espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Backgrounds Específicos para Páginas */
+body.index-page {
+  background: url('images/LRF-15\ 1.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.elenco {
+  background: url('images/LRF-166\ 1.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.galeria {
+  background: url('images/LRF-2.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.jogos {
+  background: url('images/LRF-95\ 1.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.patrocinadores {
+  background: url('images/LRF-89\ 2.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #FF5800;
+  padding: 3px 10px; /* Diminuído o padding superior e inferior */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo img {
+  width: 40px; /* Logo reduzida para tamanho slim */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+nav {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente os itens do nav */
+  align-items: center; /* Centraliza verticalmente os itens do nav */
+  width: 100%;
+  height: 50px; /* Definindo altura fixa para o nav */
+  font-family: 'Roboto', sans-serif; /* Fonte Roboto Regular aplicada ao nav */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Aumentei o espaçamento entre os itens do nav */
+  margin: 0; /* Garantir que não haja margens */
+}
+
+nav ul li {
+  display: flex;
+  align-items: center; /* Centraliza o conteúdo dentro de cada <li> */
+}
+
+/* Nav */
+/* Estilo para o link no menu */
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: normal;
+  display: inline-block;
+  position: relative; /* Necessário para posicionar as linhas */
+  padding: 5px 0; /* Espaçamento ao redor do texto */
+}
+
+/* Estilo para o link ativo */
+nav ul li a.active::before,
+nav ul li a.active::after {
+  content: ""; /* Cria o conteúdo para as linhas */
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #000000; /* Cor das linhas */
+}
+
+nav ul li a.active::before {
+  top: 0; /* Linha superior */
+}
+
+nav ul li a.active::after {
+  bottom: 0; /* Linha inferior */
+}
+
+
+
+
+/* Seções e Galeria */
+.section {
+  padding: 40px;
+}
+
+.imagem-superior {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  margin-top: 20px; /* Espaçamento entre a barra e a imagem */
+}
+
+.imagem-superior img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+#galeria h2, #jogos h2, #elenco h2 {
+  font-size: 36px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#galeria h2 span {
+  color: #FF5800;
+}
+
+.gallery {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Rodapé */
+footer {
+  background-color: #FF5800;
+  padding: 5px 20px; /* Ajuste no padding para dar mais espaço */
+  text-align: center;
+  color: #000;
+  font-size: 12px; /* Diminuí o tamanho da fonte */
+  margin-top: auto; /* Garante que o rodapé fique no final da página */
+  display: flex; /* Flexbox para o rodapé */
+  flex-direction: column; /* Organiza os elementos do footer em uma coluna */
+  justify-content: flex-end; /* Alinha os itens para o final do footer */
+  height: 60px; /* Define uma altura fixa para o footer */
+}
+
+footer .sponsors img {
+  width: 60px; /* Reduzi o tamanho das imagens de patrocinadores para economizar espaço */
+  margin: 0 10px;
+}
