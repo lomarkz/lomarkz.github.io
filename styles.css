@@ -330,7 +330,10 @@ body {
   align-items: center; /* Centraliza os números verticalmente */
   gap: 5px; /* Espaçamento reduzido entre os números */
 }
-
+.placar {
+  transform: scale(0.5); /* Diminui para 50% */
+  transform-origin: center;
+}
 
 
 
