@@ -1,9 +1,16 @@
-// Seleciona todos os links dentro do menu de navegação
-const links = document.querySelectorAll('nav ul li a');
-
-// Para cada link, verificamos se o 'href' do link é igual ao caminho da página atual
-links.forEach(link => {
-  if (window.location.pathname === link.pathname) {
-    link.classList.add('active'); // Adiciona a classe 'active' ao link que corresponder
+document.addEventListener('DOMContentLoaded', function() {
+  // Agora o código será executado depois que o DOM estiver carregado
+  function togglePlacar(isJogoAtivo) {
+    const placarCard = document.getElementById('placar-card');
+    
+    if (isJogoAtivo) {
+      placarCard.style.display = 'flex';
+    } else {
+      placarCard.style.display = 'none';
+    }
   }
+
+  // Exemplo de uso:
+  let jogoAtivo = false; // Defina `false` se não houver jogo
+  togglePlacar(jogoAtivo);
 });
