@@ -191,3 +191,165 @@ body {
 .content {
   flex: 1;
 }
+
+/*card jogos/
+
+
+/* Estilo geral do card */
+/* Contêiner dos cards */
+.card-container {
+  display: flex; /* Layout flexível */
+  flex-wrap: wrap; /* Permite que os cards quebrem para uma nova linha, se necessário */
+  gap: 20px; /* Espaçamento entre os cards */
+  justify-content: center; /* Centraliza os cards horizontalmente */
+  padding: 20px; /* Espaçamento ao redor do contêiner */
+  box-sizing: border-box; /* Garante que o padding não afete a largura */
+}
+
+/* Estilo do card */
+.card {
+  width: 300px; /* Largura fixa */
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(255, 88, 0, 0.3); /* Sombra laranja */
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  margin: 0; /* Remove qualquer margem adicional */
+}
+
+/* Cabeçalho do card */
+.card-header {
+  background-color: #FF5800; /* Fundo laranja */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: center;
+  color: white; /* Cor do texto */
+}
+
+/* Times e logos */
+.team {
+  text-align: center;
+}
+
+.team img {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.team p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(0, 0, 0); /* Texto branco */
+}
+
+.versus {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(0, 0, 0); /* Texto branco */
+}
+
+/* Corpo do card */
+.card-body {
+  background-color: white; /* Fundo branco */
+  color: #333; /* Texto escuro */
+  padding: 20px;
+  text-align: center; /* Centraliza o texto */
+  border-radius: 0 0 10px 10px; /* Arredonda apenas os cantos inferiores */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve no corpo */
+}
+
+/* Texto da competição */
+.competition {
+  font-size: 12px;
+  color: gray; /* Texto em cinza */
+  margin-bottom: 10px; /* Espaçamento entre os títulos */
+}
+
+/* Título e detalhes */
+.card-body h3 {
+  font-size: 18px;
+  margin: 10px 0; /* Ajusta o espaçamento acima e abaixo do título */
+  font-weight: bold;
+}
+
+.details {
+  margin-top: 10px;
+}
+
+.details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #000000; /* Texto em tom escuro */
+}
+
+.details .icon {
+  margin-right: 5px;
+}
+
+
+
+
+/* Card Placar Horizontal */
+.card-score-horizontal {
+  background-color: #FF5800; /* Fundo laranja */
+  color: white; /* Texto branco */
+  display: flex; /* Usando flexbox para dispor os itens horizontalmente */
+  justify-content: space-between; /* Espaçamento entre os times e "AO VIVO" */
+  align-items: center; /* Alinha os itens verticalmente */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Largura total do container */
+  max-width: 600px; /* Define um tamanho máximo para o card */
+  margin: 20px auto; /* Alinha o card ao centro da página */
+  display: none; /* Inicialmente escondido, será ativado via JavaScript */
+}
+
+.card-score-horizontal .team {
+  display: flex; /* Flexbox para alinhar logo e nome */
+  align-items: center;
+}
+
+.card-score-horizontal .team img {
+  height: 40px; /* Tamanho da logo */
+  margin-right: 10px; /* Espaço entre logo e nome */
+}
+
+.card-score-horizontal .team p {
+  font-size: 18px; /* Tamanho do nome do time */
+  font-weight: bold;
+}
+
+.card-score-horizontal .score {
+  font-size: 36px; /* Tamanho maior do placar */
+  font-weight: bold;
+  display: flex;
+  align-items: center; /* Centraliza os números verticalmente */
+  gap: 5px; /* Espaçamento reduzido entre os números */
+}
+
+
+
+
+/* AO VIVO PISCAR */
+@keyframes piscar {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#ao-vivo {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000; /* Alaranjado */
+  animation: piscar 1s infinite; /* Animação contínua */
+}
+
