@@ -372,3 +372,17 @@ body {
 
   /* Ajustes para outros elementos */
 }
+
+/* Ajuste para telas pequenas */
+@media (max-width: 768px) {
+  .main-text {
+    font-size: 14px; /* Reduz o tamanho da fonte */
+    line-height: 1.5; /* Melhora a legibilidade */
+  }
+
+  .image {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a tela */
+    height: auto;
+  }
+}
+
