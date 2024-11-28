@@ -8,6 +8,7 @@
 html, body {
   height: 100%; /* Garante que a altura da página seja 100% */
   font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;  /* Impede o deslizamento horizontal */
 }
 
 /* Layout Geral */
