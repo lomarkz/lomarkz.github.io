@@ -175,3 +175,19 @@ footer .sponsors img {
   width: 60px; /* Reduzi o tamanho das imagens de patrocinadores para economizar espaço */
   margin: 0 10px;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Define a estrutura do layout */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* O conteúdo principal cresce conforme necessário */
+.content {
+  flex: 1;
+}
