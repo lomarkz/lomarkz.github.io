@@ -358,34 +358,44 @@ body {
 }
 /*adicionado 28/11/2024*/
 
-@media (max-width: 768px) {
-  .navbar {
-   flex-direction: column; /* Empilha os itens no mobile */
-    padding: 8px;
+@media (max-width: 480px) {
+  /* Cabeçalho ainda mais compacto */
+  header {
+    padding: 5px; /* Reduz o padding do cabeçalho */
   }
 
-  .navbar a {
-     margin: 8px 0; /* Adiciona mais espaço vertical entre os links */
-    font-size: 0.9rem; /* Reduz o tamanho da fonte no mobile */
+  nav ul {
+    gap: 3px; /* Menor espaçamento entre os links */
   }
 
-  .main-content {
-    font-size: 14px; /* Ajuste o tamanho da fonte para telas menores */
+  nav ul li a {
+    font-size: 14px; /* Reduz tamanho da fonte */
   }
 
-  /* Ajustes para outros elementos */
+  /* Ajuste no card */
+  .card {
+    width: 100%; /* Ocupa 100% da largura da tela */
+  }
+
+  .card-header {
+    padding: 10px; /* Padding menor */
+  }
+
+  .card-body {
+    padding: 10px; /* Padding menor */
+  }
+
+  .card-score-horizontal {
+    flex-direction: column; /* Coloca os elementos em coluna */
+    text-align: center; /* Centraliza os textos */
+    padding: 10px; /* Reduz o padding */
+  }
+
+  .card-score-horizontal .score {
+    font-size: 28px; /* Diminui o tamanho do placar */
+  }
+
+  .card-score-horizontal .team img {
+    height: 30px; /* Reduz tamanho das logos */
+  }
 }
-
-/* Ajuste para telas pequenas */
-@media (max-width: 768px) {
-  .main-text {
-    font-size: 14px; /* Reduz o tamanho da fonte */
-    line-height: 1.5; /* Melhora a legibilidade */
-  }
-
-  .image {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a tela */
-    height: auto;
-  }
-}
-
