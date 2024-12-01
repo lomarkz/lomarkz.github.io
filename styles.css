@@ -399,3 +399,8 @@ body {
     height: 30px; /* Reduz tamanho das logos */
   }
 }
+
+.hero img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela */
+  height: auto; /* Mantém a proporção da imagem */
+}
