@@ -11,6 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Exemplo de uso:
-  let jogoAtivo = false; // Defina `false` se não houver jogo
+  let jogoAtivo = true; // Defina `false` se não houver jogo
   togglePlacar(jogoAtivo);
 });
